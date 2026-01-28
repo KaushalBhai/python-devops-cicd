@@ -54,16 +54,6 @@ jobs:
         run: |
           python -c "import flask; print('Flask imported successfully')"
 
-      # 🔥 Jenkins Trigger (NON-BLOCKING – CI WILL STAY GREEN)
-    #   - name: Trigger Jenkins Job
-    #     uses: appleboy/jenkins-action@master
-    #     continue-on-error: true
-    #     with:
-    #       url: "http: //localhost:8080"
-    #       user: "kaushal"
-    #       token: "11f232282f90e2580a35c223130c6237c5"
-    #       job: "python-docker-deploy"
-        
       - name: Trigger Jenkins Job
         uses: appleboy/jenkins-action@master
         continue-on-error: true
